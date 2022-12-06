@@ -1,0 +1,39 @@
+
+const cursos = [
+   {
+      titulo : 'Javascipt moderno guia definitiva construye +10 proyectossasdasdasdsa',
+      tecnologia : 'JAVACRIPT ES6asdf'
+   },
+   {
+      titulo : 'Javascipt moderno guia definitiva construye +10 proyectossasdsadasw',
+      tecnologia : 'NODEJS'
+   },
+   {
+      titulo : 'Javascipt moderno guia definitiva construye +10 proyectoss',
+      tecnologia : 'JAVACRIPT ES6as'
+   },
+   {
+      titulo : 'Javascipt moderno guia definitiva construye +10 proyectosss',
+      tecnologia : 'JAVACRIPT ES6fva'
+   },
+   {
+      titulo : 'Javascipt moderno guia definitiva construye +10 proyectossss',
+      tecnologia : 'JAVACRIPT ES6ewfw'
+   },
+   {
+      titulo : 'Javascipt moderno guia definitiva construye +10 proyectosssss',
+      tecnologia : 'JAVACRIPT ES6zz'
+   }
+]
+
+
+const resolvers = {
+   Query : {
+      obtenerCursos: (_,{input},ctx,info) => {
+         const rst = cursos.filter(curso => curso.tecnologia === input.tecnologia);
+         return rst;
+      }
+   }
+}
+
+module.exports = resolvers;
